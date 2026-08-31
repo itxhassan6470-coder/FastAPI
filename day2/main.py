@@ -44,7 +44,10 @@ def sorted_data(sortby :str = Query(...,description="sort on the basis of height
     sort_order = True if order=='desc' else False
 
 
-    data = load
-    sorteddata=sorted(data.value,key=lambda x: x.get(sortby,0) reverse= sort_order)
+    data = load()
+    sorteddata=sorted(data.values()
+                      ,key=lambda x: x.get(sortby,0)
+                      ,reverse=sort_order)
+    return sorteddata 
 
 
