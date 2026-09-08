@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Aura Living &amp; Insurance Premium Intelligence</title>
+
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&amp;display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        },
+        colors: {
+          brand: {
+            ivory: '#F9F8F5',
+            navy: '#1A1838',
+            indigo: '#201A4A',
+            warmGlow: '#FDE4CE',
+            accentAmber: '#FF9E64',
+            softGray: '#E5E4DE'
+          }
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="hero-bg text-[#1f2024] antialiased min-h-screen flex items-center justify-center p-3 md:p-8 font-sans selection:bg-brand-navy selection:text-white">
+
+<!-- BEGIN: Outer Architectural Wrapper -->
+<div class="relative w-full max-w-[1360px] mx-auto min-h-[920px] rounded-[3rem] p-3 sm:p-5 bg-white/40 border border-white/60 shadow-[0_40px_100px_rgba(20,20,35,0.18)] backdrop-blur-2xl flex flex-col justify-between overflow-hidden">
+
+  <!-- BEGIN: Main Centerpiece Canvas Frame -->
+  <div class="relative w-full rounded-[2.5rem] main-stage-canvas border border-white/80 overflow-hidden shadow-[inset_0_2px_4px_rgba(255,255,255,0.9),0_25px_60px_rgba(20,20,40,0.15)] flex flex-col my-2 grow">
+
+    <!-- Architectural Glass Glow Effects -->
+    <div class="absolute inset-0 pointer-events-none z-0">
+      <div class="absolute top-10 right-20 w-96 h-96 warm-glow-orb opacity-60"></div>
+      <div class="absolute bottom-10 left-1/3 w-[500px] h-[300px] bg-sky-200/30 blur-[70px] rounded-full"></div>
+      <div class="absolute bottom-0 right-0 w-3/4 h-[75%] border-t border-l border-white/40 rounded-tl-[100px] bg-gradient-to-tr from-[#1B1936]/15 via-transparent to-white/10 backdrop-blur-[2px]"></div>
+    </div>
+
+    <!-- BEGIN: Content Body -->
+    <div class="relative z-10 flex-1 flex flex-col md:flex-row px-4 sm:px-8 py-8 gap-6 items-stretch">
+
+      <main class="flex-1 flex flex-col justify-center z-10">
+
+        <!-- Editorial Headline -->
+        <div class="mb-8 text-center flex flex-col items-center">
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight text-white/95 drop-shadow-sm leading-none">
+            Insurance pe<br><span class="font-extrabold text-white">Prediction.</span>
+          </h1>
+          <p class="text-xs sm:text-sm text-slate-100/90 max-w-md mt-3 font-normal leading-relaxed drop-shadow-sm">
+            Enter your personal details below to see the premium category our
+            model places you in.
+          </p>
+        </div>
+
+        <!-- Glass Form Container -->
+        <div class="gap-5 items-start flex justify-center w-full flex-1">
+          <section class="glass-card rounded-[2.5rem] p-6 sm:p-7 shadow-2xl relative overflow-hidden w-full max-w-2xl mx-auto md:p-8" data-purpose="premium-form-container">
+
+            <div class="flex items-center justify-between mb-5">
+              <div>
+                <h2 class="text-lg font-bold text-brand-navy tracking-tight">Your Coverage Details</h2>
+                <p class="text-xs text-gray-600">Tell us about yourself to view your personalized premium category.</p>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-white/80 border border-white flex items-center justify-center text-brand-navy shadow-sm shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+              </div>
+            </div>
+
+            <form class="space-y-4" id="predict-form">
+              <!-- Row 1: Age & Income -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <div>
+                  <label class="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1 ml-1" for="age">Age (Years)</label>
+                  <input class="w-full rounded-2xl custom-input px-4 py-2.5 text-sm font-semibold text-brand-navy placeholder-gray-400" id="age" max="119" min="1" name="age" required type="number" value="30">
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1 ml-1" for="income_lpa">Annual Income (LPA)</label>
+                  <input class="w-full rounded-2xl custom-input px-4 py-2.5 text-sm font-semibold text-brand-navy placeholder-gray-400" id="income_lpa" min="0.1" name="income_lpa" required step="0.1" type="number" value="10">
+                </div>
+              </div>
+
+              <!-- Row 2: Weight & Height -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <div>
+                  <label class="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1 ml-1" for="weight">Weight (kg)</label>
+                  <input class="w-full rounded-2xl custom-input px-4 py-2.5 text-sm font-semibold text-brand-navy placeholder-gray-400" id="weight" min="1" name="weight" required step="0.1" type="number" value="65">
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1 ml-1" for="height">Height (meters)</label>
+                  <input class="w-full rounded-2xl custom-input px-4 py-2.5 text-sm font-semibold text-brand-navy placeholder-gray-400" id="height" max="2.5" min="0.5" name="height" required step="0.01" type="number" value="1.7">
+                </div>
+              </div>
+
+              <!-- Row 3: Smoker Status & City -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <div>
+                  <label class="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1 ml-1" for="smoker">Are you a smoker?</label>
+                  <select class="w-full rounded-2xl custom-input px-4 py-2.5 text-sm font-semibold text-brand-navy cursor-pointer" id="smoker" name="smoker" required>
+                    <option selected value="false">No</option>
+                    <option value="true">Yes</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1 ml-1" for="city">City</label>
+                  <input class="w-full rounded-2xl custom-input px-4 py-2.5 text-sm font-semibold text-brand-navy placeholder-gray-400" id="city" name="city" required type="text" value="Mumbai">
+                </div>
+              </div>
+
+              <!-- Row 4: Occupation -->
+              <div>
+                <label class="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1 ml-1" for="occupation">Occupation</label>
+                <select class="w-full rounded-2xl custom-input px-4 py-2.5 text-sm font-semibold text-brand-navy cursor-pointer" id="occupation" name="occupation" required>
+                  <option selected value="private_job">Private Job</option>
+                  <option value="government_job">Government Job</option>
+                  <option value="business_owner">Business Owner</option>
+                  <option value="freelancer">Freelancer</option>
+                  <option value="student">Student</option>
+                  <option value="retired">Retired</option>
+                  <option value="unemployed">Unemployed</option>
+                </select>
+              </div>
+
+              <!-- Action Submit Button -->
+              <div class="pt-2 flex items-center justify-between gap-4">
+                <div class="text-[11px] text-gray-500 font-medium hidden sm:block">Instant personalized assessment</div>
+                <button class="group relative inline-flex items-center gap-3 bg-brand-navy hover:bg-brand-indigo text-white font-semibold text-sm px-6 py-3 rounded-full transition-all duration-300 shadow-[0_12px_25px_-8px_rgba(26,24,56,0.5)] hover:shadow-indigo-900/40 hover:-translate-y-0.5 active:translate-y-0 ml-auto" id="predict-btn" type="submit">
+                  <span data-btn-label>Calculate Premium</span>
+                  <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:rotate-45 transition-transform duration-300">↗</span>
+                </button>
+              </div>
+            </form>
+
+            <!-- Dynamic Result Box -->
+            <div class="hidden mt-5 pt-5 border-t border-white/60" id="result-box">
+              <!-- Success state -->
+              <div class="hidden items-center justify-between gap-4 bg-gradient-to-br from-brand-navy to-brand-indigo text-white p-5 rounded-2xl shadow-xl animate-fade-in" id="result-success">
+                <div class="min-w-0">
+                  <span class="text-[10px] tracking-widest uppercase text-amber-300 font-bold block mb-1">Predicted Premium Category</span>
+                  <div class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white truncate" id="result-category-value">—</div>
+                  <span class="text-xs text-white/70 mt-1 block" id="result-status-text">Assessed for your profile.</span>
+                </div>
+                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center border border-white/20 text-brand-accentAmber text-xl font-bold shrink-0">✓</div>
+              </div>
+
+              <!-- Error state -->
+              <div class="hidden items-center gap-4 bg-red-50 border border-red-200 text-red-800 p-5 rounded-2xl" id="result-error">
+                <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 text-lg font-bold shrink-0">!</div>
+                <div class="min-w-0">
+                  <span class="text-[10px] tracking-widest uppercase text-red-500 font-bold block mb-1">Request Failed</span>
+                  <p class="text-sm font-medium" id="result-error-text">Something went wrong.</p>
+                </div>
+              </div>
+            </div>
+
+          </section>
+        </div>
+      </main>
+    </div>
+    <!-- END: Content Body -->
+  </div>
+  <!-- END: Main Centerpiece Canvas Frame -->
+</div>
+<!-- END: Outer Architectural Wrapper -->
+
+<script src="script.js"></script>
+</body>
+</html>
